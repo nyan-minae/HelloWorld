@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -15,7 +16,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.4.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -46,5 +47,17 @@
 		</plugins>
 	</build>
 
-
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>artifactory-vm-releases</name>
+			<url>http://35.221.100.66/artifactory/maven</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>artifactory-vm-snapshots</name>
+			<url>http://35.221.100.66/artifactory/maven</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
 </project>
