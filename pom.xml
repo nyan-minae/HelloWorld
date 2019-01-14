@@ -43,11 +43,11 @@
 	</build>
 
 	<distributionManagement>
-	    <repository>
-	        <id>central</id>
-	        <name>artifactory-1-vm-releases</name>
-	        <url>http://34.85.33.248/artifactory/libs-release-local</url>
-	    </repository>
+	    <snapshotRepository>
+	        <id>snapshots</id>
+	        <name>artifactory-1-vm-snapshots</name>
+	        <url>http://34.85.33.248/artifactory/libs-snapshot-local</url>
+	    </snapshotRepository>
 	</distributionManagement>
 	
 	
