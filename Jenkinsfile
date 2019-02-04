@@ -1,12 +1,10 @@
 pipeline {
   agent {
-    docker {
-      image 'node:8.12-alpine'
+    dockerfile {
+      filename 'dockerfile'
     }
+
   }
-
-  triggers { pollSCM('H/2 * * * *') }
-
   stages {
     stage('Npm Build') {
       steps {
@@ -14,17 +12,24 @@ pipeline {
       }
     }
   }
-
   post {
     success {
-        echo 'I succeeeded!'
+      echo 'I succeeeded!'
+
     }
+
     unstable {
-        echo 'I am unstable :/'
+      echo 'I am unstable :/'
+
     }
+
     failure {
-        echo 'I failed :('
+      echo 'I failed :('
+
     }
+
+  }
+  triggers {
+    pollSCM('H/2 * * * *')
   }
 }
-
