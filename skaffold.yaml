@@ -7,7 +7,7 @@ build:
     docker: {}
   tagPolicy:
     envTemplate:
-      template: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/HelloWorld:{{.VERSION}}'
+      template: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/helloworld:{{.VERSION}}'
   local: {}
 deploy:
   kubectl: {}
@@ -18,7 +18,7 @@ profiles:
     - docker: {}
     tagPolicy:
       envTemplate:
-        template: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/HelloWorld:{{.DIGEST_HEX}}'
+        template: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/helloworld:{{.DIGEST_HEX}}'
     local: {}
   deploy:
     helm:
@@ -26,5 +26,5 @@ profiles:
       - name: HelloWorld
         chartPath: charts/HelloWorld
         setValueTemplates:
-          image.repository: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/HelloWorld'
+          image.repository: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/helloworld'
           image.tag: '{{.DIGEST_HEX}}'
