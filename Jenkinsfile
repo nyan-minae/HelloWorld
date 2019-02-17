@@ -4,7 +4,7 @@ pipeline {
   }
   environment {
     ORG = 'minae-nakagawa-gmail-com'
-    APP_NAME = 'HelloWorld'
+    APP_NAME = 'helloworld'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }
   stages {
