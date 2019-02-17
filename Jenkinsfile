@@ -54,8 +54,7 @@ pipeline {
         }
       }
     }
-  }
-  stage('Promote to Environments') {
+    stage('Promote to Environments') {
       when {
         branch 'master'
       }
