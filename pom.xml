@@ -6,7 +6,7 @@
 
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>demo</name>
@@ -30,13 +30,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>com.example</groupId>
-			<artifactId>demo</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -46,15 +39,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-	</build>
-
-	<distributionManagement>
-	    <snapshotRepository>
-	        <id>snapshots</id>
-	        <name>artifactory-1-vm-snapshots</name>
-	        <url>http://34.85.33.248/artifactory/libs-snapshot-local</url>
-	    </snapshotRepository>
-	</distributionManagement>
-	
+	</build>	
 	
 </project>
