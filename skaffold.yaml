@@ -24,7 +24,7 @@ profiles:
     helm:
       releases:
       - name: HelloWorld
-        chartPath: charts/HelloWorld
+        chartPath: charts/helloworld
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/minae-nakagawa-gmail-com/helloworld'
           image.tag: '{{.DIGEST_HEX}}'
